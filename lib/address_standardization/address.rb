@@ -13,7 +13,7 @@ module AddressStandardization
   
     def initialize(address_info)
       raise NotImplementedError, "You must define valid_keys" unless self.class.valid_keys
-      raise ArgumentError, "No address given!" if address_info.empty?
+      raise ArgumentError, "No address given!" if address_info.nil? || address_info.empty?
       address_info = address_info.stringify_keys
       validate_keys(address_info)
       standardize_values!(address_info)
