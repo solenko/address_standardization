@@ -67,7 +67,6 @@ class MelissaDataTest < Test::Unit::TestCase
     end
   
     test "Invalid Canadian address" do
-      return
       addr = AddressStandardization::MelissaData.standardize_address(
         :street => "123 Imaginary Lane",
         :city => "Some Town",
